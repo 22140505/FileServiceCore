@@ -1,3 +1,8 @@
+<p align="center">
+    <a href="README.md">English</a> |   
+    <span>中文</span>
+</p>
+
 # introduction
 Simple, stable and easy-to-use file service
 
