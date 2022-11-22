@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <UserSecretsId>dc3948b3-a838-4803-8c7d-6d3875375faf</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="cache\**" />
+    <Compile Remove="Logs\**" />
+    <Compile Remove="ToolEX\**" />
+    <Content Remove="cache\**" />
+    <Content Remove="Logs\**" />
+    <Content Remove="ToolEX\**" />
+    <EmbeddedResource Remove="cache\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <EmbeddedResource Remove="ToolEX\**" />
+    <None Remove="cache\**" />
+    <None Remove="Logs\**" />
+    <None Remove="ToolEX\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="StartupDevelopment.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="appsettings.Development.json" />
+    <Content Remove="pw.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="pw.json.bak" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Destructurama.JsonNet" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.9" />
+    <PackageReference Include="MimeMapping" Version="1.0.1.50" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.2.0" />
+    <PackageReference Include="Serilog.Expressions" Version="3.4.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.4.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="5.7.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
+</Project>
