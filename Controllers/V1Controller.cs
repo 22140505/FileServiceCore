@@ -297,4 +297,10 @@ public class V1Controller : ControllerBase
 		}).ToArrayAsync(cancellationToken);
 		return Ok(new { list });
 	}
+
+	public async Task<IActionResult> count()
+	{
+		var result = await db.files.Where(e => e.appid == appid).CountAsync();
+		return Ok(new { result });
+	}
 }
